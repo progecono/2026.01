@@ -201,9 +201,6 @@ print(f"Valor: R$ {valor_grande:,.2f}")  # R$ 1,234,567.89
 # PARTE 6: EXEMPLO COMPLETO - ANÁLISE ECONÔMICA
 # ============================================
 
-print("\n" + "="*50)
-print("ANÁLISE ECONÔMICA - BRASIL 2024")
-print("="*50 + "\n")
 
 # Dados
 pib_trilhoes = 2.1
@@ -217,15 +214,23 @@ pib_bilhoes = pib_trilhoes * 1000
 pib_per_capita = (pib_trilhoes * 1000) / (populacao_milhoes / 1000)
 
 # Relatório
+
+print("=" * 50)
+print("ANÁLISE ECONÔMICA - BRASIL 2024")
+print("=" * 50)
+print()
 print(f"PIB Total: ${pib_trilhoes:.1f} trilhões (${pib_bilhoes:.0f} bilhões)")
 print(f"População: {populacao_milhoes} milhões de habitantes")
 print(f"PIB per capita: ${pib_per_capita:,.2f} mil")
-print(f"\nIndicadores:")
+print()
+print("Indicadores:")
 print(f"  • Taxa de desemprego: {taxa_desemprego}%")
 print(f"  • Inflação anual (IPCA): {inflacao}%")
 print(f"  • Taxa Selic: {taxa_juros_selic}%")
+print()
+print(f"Conclusão: Inflação {'controlada' if inflacao < 5 else 'elevada'} em 2024.")
 
-# Análise simples
+# Análise simples (outra forma)
 if inflacao < 5:
     situacao_inflacao = "controlada"
 else:
@@ -237,16 +242,17 @@ print(f"\nConclusão: Inflação {situacao_inflacao} em 2024.")
 # EXERCÍCIOS PARA PRATICAR
 # ============================================
 
-print("\n" + "="*50)
+print("="*50)
 print("EXERCÍCIOS")
-print("="*50 + "\n")
+print("="*50)
 
-# EXERCÍCIO 1: Crie variáveis para outro país.
-# Exemplo: Argentina
+# EXERCÍCIO 1: Crie variáveis para outro país e identifique o tipo de cada variável
 # - PIB (trilhões USD)
 # - População (milhões)
 # - Moeda
 # - Taxa de inflação
+# - Ano atual
+# - Faz parte do mercosul: True
 
 # Seu código aqui:
 
@@ -258,85 +264,61 @@ print("="*50 + "\n")
 
 
 # EXERCÍCIO 3: Compare com o Brasil
-# Use f-strings para criar uma mensagem tipo:
-# "O PIB per capita da Argentina é X, enquanto o do Brasil é Y"
+#Use f-strings para criar mensagens formatadas do tipo:
+#1. "O PIB per capita do Brasil é X mil USD, enquanto o PIB do País escolhido é Y" (Valores com 2 casas decimais).
+#2. "A população brasileira é de Y milhões de habitantes, enquanto a população do pais escolhido é de Z milhões de habitantes" (sem decimais, mas com separador de milhar.)
 
 # Seu código aqui:
 
 
-# EXERCÍCIO 4: Calcule a diferença entre taxas de juros
-juros_brasil = 10.75
-juros_eua = 5.25
-diferenca = juros_brasil - juros_eua
+# EXERCÍCIO 4: Crie um relatório comparando **Brasil** e **Argentina**:
+#**Dados:**
+#- Brasil: PIB = 2.1 tri, Pop = 215 mi
+#- Argentina: PIB = 0.63 tri, Pop = 46 mi
+#**Calcule:**
+#1. PIB per capita de cada país
+#2. Diferença percentual de PIB per capita
+#3. Exiba tudo formatado!
 
-print(f"A diferença entre as taxas é de {diferenca:.2f} pontos percentuais")
-
-# Agora faça você: calcule a diferença de inflação entre outros dois países
-
+# Seu código aqui:
 
 # EXERCÍCIO 5: Conversão de moedas
-# Dado: 1 USD = 5.20 BRL
-dolar = 1
-real = 5.20
-meu_salario_reais = 5000
-
-# Calcule quanto é seu salário em dólares
+#Dado que **1 USD = 5.20 BRL** e o salário de um indivíduo é de 5 mil reais, calcule quanto é o salário deste indivíduo em dólares.
+#Exiba o salário formatado em duas casas decimais e com separador de milhar.
 # Seu código aqui:
 
 
 # EXERCÍCIO 6: Crescimento populacional
-pop_2020 = 211.8  # milhões
-pop_2024 = 215.0  # milhões
-
+#Considere os seguintes dados:
+#- População 2020: 221.8 milhões
+#- População 2024: 215.0 milhões
 # Calcule:
 # a) Crescimento absoluto
 # b) Crescimento percentual
 # c) Exiba com f-strings formatadas
-
 # Seu código aqui:
 
 
 # ============================================
-# DESAFIO EXTRA (OPCIONAL)
+# DESAFIO EXTRA 
 # ============================================
 
 # Crie um mini-relatório de comparação econômica entre 3 países:
 # - Brasil, Argentina e Chile
 # - Para cada um: PIB, População, PIB per capita
-# - Use f-strings para formatar tudo bonito
+# - Use f-strings para formatar o mini relatório
 # - Calcule qual país tem o maior PIB per capita
-
-print("\n" + "="*50)
-print("DESAFIO: COMPARAÇÃO ECONÔMICA")
-print("="*50 + "\n")
-
-# Dados Brasil
-brasil_pib = 2.1
-brasil_pop = 215
-
-# Dados Argentina
-argentina_pib = 0.63
-argentina_pop = 46
-
-# Dados Chile
-chile_pib = 0.34
-chile_pop = 19
-
-# Calcule PIB per capita de cada um
 # Seu código aqui:
 
-
-# Crie o relatório formatado
-# Seu código aqui:
 
 
 # ============================================
 # RESUMO DA AULA
 # ============================================
 
-print("\n" + "="*50)
+print("="*50)
 print("RESUMO - O QUE APRENDEMOS HOJE")
-print("="*50 + "\n")
+print("="*50)
 
 print("""
 1. VARIÁVEIS: "caixinhas" que guardam valores
@@ -369,9 +351,6 @@ print("""
 # PARA CASA
 # ============================================
 
-print("\n" + "="*50)
-print("PARA CASA")
-print("="*50 + "\n")
 
 print("""
 1. LEITURA:
@@ -389,7 +368,7 @@ print("""
 
 """)
 
-print("\nBons estudos!")
+print("Bons estudos!")
 
 # ============================================
 # FIM DO ARQUIVO
